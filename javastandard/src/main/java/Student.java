@@ -1,12 +1,13 @@
+import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
 
 //TODO Create a new Class named Grades with the following members: score and disciplineName. Each Student can have one or more grades at a certain discipline
-public class Student {
+public class Student implements Serializable {
 
     private int age;
 
-    private String firstName;
+    transient private String firstName;
 
     private String lastName;
 

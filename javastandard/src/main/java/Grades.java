@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class Grades {
+public class Grades implements Serializable {
     private int score;
     private String disciplineName;
 
