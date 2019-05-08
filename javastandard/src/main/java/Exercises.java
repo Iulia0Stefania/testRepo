@@ -32,13 +32,29 @@ public class Exercises {
             return false;
     }
 
+    public static List<Integer> NumberWithSquareSumOfSquareDivisorsFinder(int a, int b){
+        List<Integer> perfectSquares = new ArrayList<>();
+        List<Integer> returnList = new ArrayList<>();
+        for(int i=a; i<=b;++i){
+            perfectSquares.add(i);
+        }
+        for(Integer number : perfectSquares){
+            if(isPerfectSquare(number))
+            {
+                returnList.add(number);
+            }
+        }
+        return returnList;
+    }
+
 
     public static void main(String[] args) {
 
 
-        //TODO NumberWithSquareSumOfSquareDivisorsFinder
-        int number = 42;
-        System.out.println("Is " +number + " a perfect square? " + isPerfectSquare(number));
+        //TODO NumberWithSquareSumOfSquareDivisorsFinder;
+        List<Integer> perfectSquares = NumberWithSquareSumOfSquareDivisorsFinder(40,44);
+        System.out.println("List of perfect squares are: ");
+        perfectSquares.stream().forEach(System.out::println);
         /// Given the limits of an interval, find all numbers in that interval for which the sum of the square of it's divisors is a perfect square
         /// The interval is closed on both ends (the limits should also be checked)
         /// Example:
